@@ -10,6 +10,13 @@ config :tunez, Tunez.Repo,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
+config :tunez, Tunez.Mailer,
+  adapter: Resend.Swoosh.Adapter,
+  api_key: System.get_env("RESEND")
+
+config :swoosh, :api_client, Swoosh.ApiClient.Finch
+
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #

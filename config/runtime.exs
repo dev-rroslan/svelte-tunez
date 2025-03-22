@@ -76,6 +76,12 @@ if config_env() == :prod do
     host: "fly.storage.tigris.dev",
     region: "auto"
 
+  config :tunez, Tunez.Mailer,
+    adapter: Resend.Swoosh.Adapter,
+    api_key: System.get_env("RESEND")
+
+  config :swoosh, :api_client, Swoosh.ApiClient.Finch
+
   # ## SSL Support
   #
   # To get SSL working, you will need to add the `https` key

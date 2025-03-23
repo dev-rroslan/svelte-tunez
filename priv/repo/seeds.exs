@@ -14,11 +14,11 @@ alias Tunez.Accounts.User
 import Ecto.Query
 #alias Comeonin.Bcrypt # Ensure Bcrypt is installed for password hashing
 
-unless Repo.exists?(from u in User, where: u.email == "dev.rroslan@gmail.com") do
+unless Repo.exists?(from u in User, where: u.email == "xxxxxxxxxxx@gmail.com") do
 
 # Define the admin user attributes
 admin_user = %{
-  email: "dev.rroslan@gmail.com",
+  email: "xxxxxxxxxxx@gmail.com",
   password: "rambling/ros",
   password_hash: Bcrypt.hash_pwd_salt("password"), # Replace with a secure password
   admin: true,

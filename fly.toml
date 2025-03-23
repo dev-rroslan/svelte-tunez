@@ -10,7 +10,7 @@ kill_signal = 'SIGTERM'
 [build]
 
 [deploy]
-  release_command = '/app/bin/migrate && mix ecto.seed'
+  release_command = '/app/bin/migrate'
 
 [env]
   PHX_HOST = 'svelte-tunez.fly.dev'

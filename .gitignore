@@ -44,3 +44,4 @@ npm-debug.log
 /priv/svelte/
 
 .env
+.envrc
